@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="form">
+        <form action="/Home/Edit" method="post">
+            <input hidden value="@ViewBag.IdNota" name="idNota"></input>
+            <label>Titulo</label>
+            <input value="@ViewBag.Nota.titulo" name="titulo" type="text" class="form-control"/>
+            <label>Contenido</label>
+            <textarea name="contenido" class="form-control">@ViewBag.Nota.contenido</textarea>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            <a class="btn btn-danger" href="/Home/Index">Cancelar</a>
+
+        </form>
+    </div>
+        
+</div>

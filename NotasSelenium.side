@@ -1,0 +1,316 @@
+{
+  "id": "82d5481f-38ca-430e-9a26-c7ce617d41c6",
+  "version": "2.0",
+  "name": "NotasSelenium",
+  "url": "https://localhost:5001/",
+  "tests": [{
+    "id": "f4c21661-77ac-4c90-8826-3697105c2dbc",
+    "name": "Crear nota",
+    "commands": [{
+      "id": "7e025b9a-cba2-49e0-830b-35271120df9f",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:5001/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0813a18-d338-406f-88fd-b56789ddbe71",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "851x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17d7cd40-d0b8-4ab9-83ac-34f3b6c23ebf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear nueva nota",
+      "targets": [
+        ["linkText=Crear nueva nota", "linkText"],
+        ["css=.container > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear nueva nota')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Home/Create')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear nueva nota')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1353785f-00d3-4cf9-81b4-b7ce043248d1",
+      "comment": "",
+      "command": "click",
+      "target": "name=titulo",
+      "targets": [
+        ["name=titulo", "name"],
+        ["css=.form-control:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='titulo']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f750712-4269-4491-a78d-9916540b6fc6",
+      "comment": "",
+      "command": "type",
+      "target": "name=titulo",
+      "targets": [
+        ["name=titulo", "name"],
+        ["css=.form-control:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='titulo']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Nueva nota test"
+    }, {
+      "id": "4dbfbeaa-4ed4-4f87-bab3-e58c97b4bedb",
+      "comment": "",
+      "command": "type",
+      "target": "name=contenido",
+      "targets": [
+        ["name=contenido", "name"],
+        ["css=.form-control:nth-child(4)", "css:finder"],
+        ["xpath=//textarea[@name='contenido']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Este es un test de creacion de nota."
+    }, {
+      "id": "d276b4c1-a68a-42a9-b83d-a9af6975a4d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5d98f12e-5384-47fd-aeff-208f7dea8124",
+    "name": "Editar nota",
+    "commands": [{
+      "id": "aa1ed917-bc5f-4e17-a956-c9488910e966",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:5001/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d7fe886-96d1-45fc-846f-6d0c45037c14",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "851x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9c15bff-a593-4ec7-a3f1-18e6ef5c38e3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Editar",
+      "targets": [
+        ["linkText=Editar", "linkText"],
+        ["css=tr:nth-child(1) .btn-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'Editar')]", "xpath:link"],
+        ["xpath=//table[@id='mytable']/tbody/tr/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/Edit?idNota=1')]", "xpath:href"],
+        ["xpath=//td[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21797933-4c36-4a2e-860f-7299e0da0a0b",
+      "comment": "",
+      "command": "click",
+      "target": "name=titulo",
+      "targets": [
+        ["name=titulo", "name"],
+        ["css=.form-control:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='titulo']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d15384ed-b7cf-482c-90b3-b687552b74bd",
+      "comment": "",
+      "command": "type",
+      "target": "name=titulo",
+      "targets": [
+        ["name=titulo", "name"],
+        ["css=.form-control:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='titulo']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Esta es la primera nota"
+    }, {
+      "id": "a23cb058-da9f-4753-931f-2254e2b24f20",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar cambios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "106af6e0-b6e7-46ce-9efd-9faa4093785a",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//table[@id='mytable']/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Esta es la primera nota')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ec95882e-811e-4d1b-94e2-35b61e808a61",
+    "name": "Eliminar nota",
+    "commands": [{
+      "id": "cc00774d-6df7-43dc-8115-978d33d9e727",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:5001/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed7f835e-52b9-4314-bb83-ca1d563a7454",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "851x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ead6f86-10f9-4dbf-b099-a67c526cdd29",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) form > .btn",
+      "targets": [
+        ["css=tr:nth-child(1) form > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//table[@id='mytable']/tbody/tr/td[3]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d6ec4025-390b-4c10-98ee-22b73a184339",
+    "name": "Buscar nota",
+    "commands": [{
+      "id": "209c0c2e-3ac9-4d19-8321-df7be2b871f4",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:5001/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eff36622-5dc3-41fa-8e7b-1c4040cafd34",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "851x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f5a5be1-464d-4e31-9c5d-35fc5e1da55d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .container",
+      "targets": [
+        ["css=.text-center > .container", "css:finder"],
+        ["xpath=//main/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b5d5027-744b-48ed-9cbd-2cd0988d6733",
+      "comment": "",
+      "command": "click",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c167b3e-e120-4a95-9c70-a59f993f2a18",
+      "comment": "",
+      "command": "type",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Segunda"
+    }, {
+      "id": "e53c2c4f-f2d2-420c-88b6-570f214084fb",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f964346a-8b2b-41f2-b878-47ae7ce116d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group",
+      "targets": [
+        ["css=.form-group", "css:finder"],
+        ["xpath=//div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1e1a7d7e-bfa8-4fac-b150-f02d48af29ef",
+    "name": "Detalles de nota",
+    "commands": [{
+      "id": "e42dce9a-a0f6-4532-bd02-834762486540",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:5001/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a02d2c02-48ce-40e2-aaac-84b696719931",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "851x761",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df4c229f-4b36-4640-95bf-9250a98bbb2a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Detalles",
+      "targets": [
+        ["linkText=Detalles", "linkText"],
+        ["css=tr:nth-child(1) .btn-warning", "css:finder"],
+        ["xpath=//a[contains(text(),'Detalles')]", "xpath:link"],
+        ["xpath=//table[@id='mytable']/tbody/tr/td[3]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Home/Details?idNota=2')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Detalles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "78468e21-7b20-431a-92c6-2160ad5a8713",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f4c21661-77ac-4c90-8826-3697105c2dbc"]
+  }],
+  "urls": ["https://localhost:5001/"],
+  "plugins": []
+}

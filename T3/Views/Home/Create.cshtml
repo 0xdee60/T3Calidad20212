@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="form">
+        <form action="/Home/Create" method="post">
+            <label>Titulo</label>
+            <input name="titulo" type="text" class="form-control"/>
+            <label>Contenido</label>
+            <textarea name="contenido" class="form-control"></textarea>
+            <button type="submit" class="btn btn-primary">Crear</button>
+                
+        </form>
+    </div>
+        
+</div>

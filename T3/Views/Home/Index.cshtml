@@ -1,0 +1,85 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+    <div class="container">
+        <a href="/Home/Create" class="btn btn-primary">Crear nueva nota</a>
+        <br/>
+        <br/>
+        <div class="container">
+            <div class="form-group">
+                <input type="text" class="form-control pull-right" style="width:20%" id="search" placeholder="Buscador...">
+            </div>
+            <table id="mytable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead >
+                <tr >
+                    <th>Titulo</th>
+                    <th>Contenido</th>
+                    <th></th>
+                </tr>
+
+                </thead>
+                <tbody>
+
+                @foreach (var item in ViewBag.Notas)
+                {
+                    <tr>
+                        <td>@item.titulo</td>
+                        <td>
+                            @if (item.contenido.Length < 50)
+                            {
+                                @item.contenido
+                            }
+                            else
+                            {
+                                string cincuenta = "";
+                                int contador = 0;
+                                while (contador <= 50)
+                                {
+                                    cincuenta += item.contenido[contador];
+                                    contador++;
+                                }
+
+                                contador = 0;
+
+                                @cincuenta
+                                <label>...</label>
+
+                            }
+                        </td>
+                        <td>
+                            <a href="/Home/Edit?idNota=@item.idNota" class="btn btn-primary">Editar</a>
+                            <a href="/Home/Details?idNota=@item.idNota" class="btn btn-warning">Detalles</a>
+                            <form action="/Home/Delete" method="post">
+                                <input hidden value="@item.idNota" name="idNota"/>
+                                <button class="btn btn-danger" type="submit">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#search").keyup(function () {
+            _this = this;
+            // Show only matching TR, hide rest of them
+            $.each($("#mytable tbody tr"), function () {
+                if ($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+                    $(this).hide();
+                else
+                    $(this).show();
+            });
+        });
+    });
+</script>
